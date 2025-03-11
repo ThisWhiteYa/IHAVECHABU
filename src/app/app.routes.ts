@@ -4,7 +4,8 @@ import { LocationComponent } from './pages/location/location.component';
 import { PaymentComponent } from './pages/payment/payment.component';
 
 export const routes: Routes = [
-    { path: 'Home', component: MainComponent }, 
-    { path: 'Location', component: LocationComponent },
-    { path: 'Payment', component: PaymentComponent }
+    { path: '', component: MainComponent }, 
+    { path: 'location', component: LocationComponent },
+    { path: 'payment', component: PaymentComponent },
+    { path: '**', component: MainComponent },
   ];
