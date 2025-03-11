@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+
 @Component({
   selector: 'app-main',
-  imports: [CardComponent, CommonModule],
+  imports: [CardComponent, CommonModule,RouterLink],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })

@@ -1,0 +1,13 @@
+.hero {
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(81, 231, 222, 0) 40%),
+      url("/images/hero-custom.png");
+    background-size: cover;
+    background-position: center;
+  
+    p {
+      margin: 0;
+    }
+  }
+  .custom-menu-img{
+    height: 400px;
+  }

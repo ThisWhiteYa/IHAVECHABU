@@ -1,0 +1,53 @@
+<div class="hero px-3 py-5 rounded-2">
+  <p style="color: white" class="fs-2 fw-bold">SHABU CUSTOMIZE</p>
+  <p style="color: #cc2b52" class="fs-3 fw-bold">จัดเซ็ตชาบู ตามหัวใจ</p>
+  <p style="color: white" class="fs-3 fw-bold">เซ็ตชาบูสำหรับแฟน ครอบครัว</p>
+</div>
+<p class="my-3 fw-bold">
+  จัดเซ็ตชาบูในแบบของคุณเอง จะสายเนื้อ สายซีฟู้ด
+  หรือสายผักก็เลือกได้ครบทุกความต้องการ
+</p>
+<p class="my-3">
+  เซ็ตชาบูที่ออกแบบมาเพื่อแฟน ครอบครัว หรือสายปาร์ตี้ จัดเต็มทั้งน้ำซุปสูตรเด็ด
+  วัตถุดิบคุณภาพระดับพรีเมียม และเครื่องเคียงครบครันกับเนื้อชั้นดี อาหารทะเลสด ๆ
+  หรือของทานเล่นสุดคุ้ม ต้องมาที่ <span style="color: #cc2b52" class="fw-bold"
+    >IHAVESHABU</span
+  >
+  เติมเต็มทุกมื้อให้สนุก อร่อย ครบจบในที่เดียว
+</p>
+<div class="content row py-3" style="height: 300px">
+  <div class="suggest-menu col-3">
+    <button
+      class="btn btn-outline-secondary w-100 mt-3"
+      (click)="selectCatagory('เนื้อ')"
+    >
+      เนื้อ
+    </button>
+    <button
+      class="btn btn-outline-secondary w-100 mt-3"
+      (click)="selectCatagory('เมนูทะเล')"
+    >
+      เมนูทะเล
+    </button>
+    <button
+      class="btn btn-outline-secondary w-100 mt-3"
+      (click)="selectCatagory('น้ำ')"
+    >
+      น้ำ
+    </button>
+    <button
+      class="btn text-white w-100 mt-3"
+      style="background-color: #cc2b52"
+      routerLink="customize"
+    >
+      สั่งซื้อ
+    </button>
+  </div>
+  <div class="item-list col-9">
+    <div class="row">
+      <div class="col-4" *ngFor="let item of selectedItems">
+        <app-card [item]="item"></app-card>
+      </div>
+    </div>
+  </div>
+</div>
