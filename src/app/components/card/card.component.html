@@ -1,1 +1,11 @@
-<p>card works!</p>
+<div class="card p-3">
+  <img [src]="item.img" alt="img" class="rounded-2" />
+  <p class="detail m-0 mt-3">{{item.detail}}</p>
+  <hr />
+  <div class="price-section d-flex justify-content-between">
+    <p class="price m-0  align-content-center" style="color: #cc2b52">{{item.price}}</p>
+    <button class="btn text-white" style="background-color: #cc2b52">
+      เลือก
+    </button>
+  </div>
+</div>

@@ -1,14 +1,25 @@
-
 <div class="hero px-3 py-5 rounded-2">
-    <p style="color: #CC2B52;">ธันวาคมนี้ต้องเจอ</p>
-    <p style="color: white;">เซ็ตถูกใจ ใคร ๆก็ต้องโดน......</p>
+  <p style="color: #cc2b52" class="fs-3">ธันวาคมนี้ต้องเจอ</p>
+  <p style="color: white">เซ็ตถูกใจ ใคร ๆ ก็ต้องโดน......</p>
 </div>
 
-<div class="content row">
-    <div class="suggest-menu col-3">
-
+<div class="content row py-3" style="height: 600px">
+  <div class="suggest-menu col-3">
+    <div class="custom-menu-img rounded-2 d-flex">
+        <div class="align-self-end px-3">
+            <p class="fs-3 text-white justify-self-end m-0">เซ็ตสุดคุ้ม</p>
+            <p class="fs-3 text-white justify-self-end fw-bold">2,999 <span style="color: #cc2b52"> บาท </span></p>
+        </div>
     </div>
-    <div class="item-list col-9">
-        <app-card></app-card>
+    <button class="btn text-white w-100 mt-3" style="background-color: #cc2b52">
+      จัดเซ็ตเอง
+    </button>
+  </div>
+  <div class="item-list col-9">
+    <div class="row">
+      <div class="col-4" *ngFor="let item of items">
+        <app-card [item]="item"></app-card>
+      </div>
     </div>
+  </div>
 </div>
