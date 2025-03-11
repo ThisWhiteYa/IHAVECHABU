@@ -1,61 +1,58 @@
 <!-- Page Container -->
-<div class="container mt-4 " >
-    <h3 class="text-center mb-4">ที่อยู่จัดส่ง</h3>
-    <form class="delivery-form">
-        <div class="mb-5 row align-items-center justify-content-center">
-          <label class="col-sm-2 col-form-label fs-4">ชื่อ - นามสกุล</label>
-          <div class="col-sm-7">
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      
-        <div class="mb-5 row align-items-center justify-content-center">
-          <label class="col-sm-2 col-form-label fs-5">เลขที่ / ซอย / หมู่บ้าน</label>
-          <div class="col-sm-7">
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      
-        <div class="mb-5 row align-items-center justify-content-center">
-          <label class="col-sm-2 col-form-label fs-5">ถนน</label>
-          <div class="col-sm-7">
-            <input type="text" class="form-control" >
-          </div>
-        </div>
-      
-        <div class="mb-5 row align-items-center justify-content-center">
-          <label class="col-sm-2 col-form-label fs-5">แขวง (ตำบล)</label>
-          <div class="col-sm-7">
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      
-        <div class="mb-5 row align-items-center justify-content-center">
-          <label class="col-sm-2 col-form-label fs-5">เขต (อำเภอ)</label>
-          <div class="col-sm-7">
-            <input type="text" class="form-control" >
-          </div>
-        </div>
-      
-        <div class="mb-5 row align-items-center justify-content-center">
-          <label class="col-sm-2 col-form-label fs-5">จังหวัด</label>
-          <div class="col-sm-7">
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      
-        <div class="mb-5 row align-items-center justify-content-center">
-          <label class="col-sm-2 col-form-label fs-5">เลขไปรษณีย์</label>
-          <div class="col-sm-7">
-            <input type="text" class="form-control" >
-          </div>
-        </div>
-      
-        <!-- Submit Button Aligned Right -->
-        <div class="d-flex justify-content-end ml-3 Button">
-          <button type="submit" class="btn btn-danger">ชำระเงิน</button>
-        </div>
-      </form>
-  
-  </div>
-  
+<div class="container mt-4">
+  <h3 class="text-center mb-4">ที่อยู่จัดส่ง</h3>
+  <form class="delivery-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div class="mb-4 row align-items-center justify-content-center">
+      <label class="col-sm-2 col-form-label fs-5 text-end">ชื่อ - นามสกุล :</label>
+      <div class="col-sm-7">
+        <input required type="text" class="form-control" placeholder="นาย....." [(ngModel)]="formData.name" name="name">
+      </div>
+    </div>
+
+    <div class="mb-4 row align-items-center justify-content-center">
+      <label class="col-sm-2 col-form-label fs-5 text-end">เลขที่/ซอย/หมู่บ้าน :</label>
+      <div class="col-sm-7">
+        <input required type="text" class="form-control" placeholder="123" [(ngModel)]="formData.address" name="address">
+      </div>
+    </div>
+
+    <div class="mb-4 row align-items-center justify-content-center">
+      <label class="col-sm-2 col-form-label fs-5 text-end">ถนน :</label>
+      <div class="col-sm-7">
+        <input required type="text" class="form-control" placeholder="จรัญสนิทวงศ์" [(ngModel)]="formData.road" name="road">
+      </div>
+    </div>
+
+    <div class="mb-4 row align-items-center justify-content-center">
+      <label class="col-sm-2 col-form-label fs-5 text-end">แขวง (ตำบล) :</label>
+      <div class="col-sm-7">
+        <input required type="text" class="form-control" placeholder="บางขุนนนท์" [(ngModel)]="formData.subDistrict" name="subDistrict">
+      </div>
+    </div>
+
+    <div class="mb-4 row align-items-center justify-content-center">
+      <label class="col-sm-2 col-form-label fs-5 text-end">เขต (อำเภอ) :</label>
+      <div class="col-sm-7">
+        <input required type="text" class="form-control" placeholder="สายไหม" [(ngModel)]="formData.district" name="district">
+      </div>
+    </div>
+
+    <div class="mb-4 row align-items-center justify-content-center">
+      <label class="col-sm-2 col-form-label fs-5 text-end">จังหวัด :</label>
+      <div class="col-sm-7">
+        <input required type="text" class="form-control" placeholder="กรุงเทพมหานคร" [(ngModel)]="formData.province" name="province">
+      </div>
+    </div>
+
+    <div class="mb-4 row align-items-center justify-content-center">
+      <label class="col-sm-2 col-form-label fs-5 text-end">เลขไปรษณีย์ :</label>
+      <div class="col-sm-7">
+        <input required type="text" class="form-control" placeholder="1150" [(ngModel)]="formData.zipCode" name="zipCode">
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-end ml-3 Button">
+      <button type="submit" class="btn btn-danger">ชำระเงิน</button>
+    </div>
+  </form>
+</div>
