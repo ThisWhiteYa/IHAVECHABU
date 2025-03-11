@@ -1,0 +1,7 @@
+.hero{
+    background-image: url('/public/');
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(81,231,222,0) 30%);
+    p{
+        margin: 0;
+    }
+}
