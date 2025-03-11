@@ -1,0 +1,24 @@
+<h1>รายการ</h1>
+<table class="w-100">
+  <thead>
+    <tr>
+      <td
+        class="px-2 py-1 text-white rounded-2 fs-4 text-center"
+        style="background-color: #cc2b52"
+      >
+        สินค้า
+      </td>
+      <td class="px-2 py-1 fs-4 text-center">ราคา</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items" >
+      <td class="text-center py-4 rounded-2 fs-5">{{ item.detail }}</td>
+      <td class="text-center py-4 fs-5">{{ item.price }} ฿</td>
+    </tr>
+  </tbody>
+</table>
+<h1>ยอดรวมสุทธิ : {{ sum }} ฿</h1>
+<button class="btn w-100 text-white" style="background-color: #cc2b52" routerLink="/payment">
+  ยืนยันสั่งซื้อ
+</button>
