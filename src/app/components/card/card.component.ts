@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card.component.css',
 })
 export class CardComponent {
-  @Input() item!: { detail: string; price: string; img: string };
+  @Input() item!: { detail: string; price: string; img: number };
 }
