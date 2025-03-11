@@ -15,12 +15,12 @@ export class CustomizeComponent {
   } = {
     เนื้อ: [
       {
-        detail: 'เนื้อปลาดอลลี่',
+        detail: 'เนื้อสันคอหมู',
         price: '150',
         img: '/images/menu/meat/XL_01094.jpg',
       },
       {
-        detail: 'เนื้อสันคอหมู',
+        detail: 'เนื้อปลาดอลลี่',
         price: '120',
         img: '/images/menu/meat/Shabu-shi095.jpg',
       },
